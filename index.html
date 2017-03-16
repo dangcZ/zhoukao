@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+   
+	<style type="text/css">
+		#pp{
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000;
+			text-align: center;
+            margin: 0 auto;
+		}
+		#tt{
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000;
+			text-align: center;
+            margin: 0 auto;
+            line-height: 300px;
+            display: none;
+		}
+		#cc{
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000;
+			text-align: center;
+            margin: 0 auto;
+            line-height: 300px;
+            display: none;
+		}
+		input{
+
+		}
+
+	</style>
+</head>
+<body>
+  <!-- 这里是登录的表单的位置 -->
+	<div id="pp">
+	    <form action="">
+		用户:<input id="yi" type="text"><br>
+        密码:<input id="er" type="password"><br>
+        <input id="btn" type="submit" name="" value="登录">
+       </form>
+	</div>
+	<div id="tt">
+		恭喜您，登录成功！
+
+	</div>
+	<div id="cc">
+		对不起，登录失败！
+
+	</div>
+
+</body>
+<script type="text/javascript">
+	var yi = document.getElementById('yi');
+	var er = document.getElementById('er');
+    var btn = document.getElementById('btn');
+    var pp = document.getElementById('pp');
+    btn.onclick = function(){
+    		if (yi.value ==""||er.value =="") {
+          alert("账号或者密码不能为空")
+	}else if (yi.value =="admin"&&er.value =="123456") {
+		pp.style.display ="none";
+		tt.style.display ="block";
+	}else{
+		pp.style.display ="none";
+		cc.style.display ="block";
+	}
+
+    }
+	
+
+
+</script>
+</html>
